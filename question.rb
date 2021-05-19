@@ -38,6 +38,5 @@ def procStr(str)
             end
         end
     }
-    
     return stack.empty?
 end
