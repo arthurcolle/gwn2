@@ -27,11 +27,9 @@ def procStr(str)
     }
 
     stack = []
-    puts stack
     str.gsub(/[a-zA-Z]/, "").split("").each { |c|
         if pairs.keys.include?(c.to_sym)
             stack.push(c)
-            puts stack
         else
             if c != pairs[(stack.last || "").to_sym]
                 return false
@@ -40,6 +38,6 @@ def procStr(str)
             end
         end
     }
-    puts stack
+    
     return stack.empty?
 end
